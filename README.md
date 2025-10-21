@@ -18,7 +18,7 @@ To install helium using this Nix flake:
 2. Add the package to your system packages:
     ```nix
     environment.systemPackages = [
-      inputs.helium.packages.${system}.default
+      inputs.helium.defaultPackage.${system}
     ];
     ```
 
