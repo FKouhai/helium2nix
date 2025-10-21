@@ -33,7 +33,7 @@ We welcome contributions to improve this Nix flake for the helium browser!
 
 ### Updating the AppImage
 
-1. Download the latest AppImage from the official Eden repository.
+1. Download the latest AppImage from the official Helium repository.
 2. Update the URL and SHA256 hash in `flake.nix`:
     ```bash
     nix-prefetch-url <new-AppImage-URL>
