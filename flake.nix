@@ -1,5 +1,5 @@
 {
-  description = "A basic AppImage bundler";
+  description = "Helium AppImage nixified";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -26,11 +26,11 @@
         helium = pkgs.appimageTools.wrapType2 rec {
 
           pname = "helium";
-          version = "0.5.3.1";
+          version = "0.5.7.1";
 
           src = pkgs.fetchurl {
             url = "https://github.com/imputnet/helium-linux/releases/download/${version}/${pname}-${version}-x86_64.AppImage";
-            sha256 = "sha256-uPFO1xvL0Uc4eBWZ7yvWoKErUpbyrUDyOMIboOVlzxw=";
+            sha256 = "sha256-A+fNcW7ujbeYqOb+gxzQ0p19J14csfFyok0RVRFxo60=";
           };
 
           extraInstallCommands =
