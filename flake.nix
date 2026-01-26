@@ -33,6 +33,10 @@
             sha256 = "sha256-GGltZ0/6rGQJixlGz3Na/vAwOlTeUR87WGyAPpLmtKM=";
           };
 
+          extraBwrapArgs = [
+            "--ro-bind-try /etc/chromium /etc/chromium"
+          ];
+
           extraInstallCommands =
             let
               contents = pkgs.appimageTools.extract { inherit pname version src; };
