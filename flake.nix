@@ -25,6 +25,7 @@
         };
         helium =
           {
+            commandLineArgs ? [ ],
             enableFeatures ? [ ],
             libvaSupport ? pkgs.stdenv.hostPlatform.isLinux,
           }:
@@ -61,7 +62,10 @@
                 wrapProgram $out/bin/${pname} \
                   ${pkgs.lib.optionalString (
                     _enableFeatures != [ ]
-                  ) "--add-flags \"--enable-features=${pkgs.lib.strings.concatStringsSep "," _enableFeatures}\""}
+                  ) "--add-flags \"--enable-features=${pkgs.lib.strings.concatStringsSep "," _enableFeatures}\""} \
+                  ${pkgs.lib.optionalString (
+                    commandLineArgs != [ ]
+                  ) "--add-flags \"${pkgs.lib.strings.concatStringsSep " " commandLineArgs}\""}
                 install -m 444 -D ${contents}/${pname}.desktop -t $out/share/applications
                 substituteInPlace $out/share/applications/${pname}.desktop \
                   --replace 'Exec=AppRun' 'Exec=${pname}'
