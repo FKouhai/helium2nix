@@ -42,7 +42,6 @@
               enableFeatures
               ++ pkgs.lib.optionals libvaSupport [
                 "VaapiVideoDecoder"
-                "VaapiVideoEncoder"
               ];
 
             extraPkgs = pkgs: pkgs.lib.optionals libvaSupport [ pkgs.libva ];
