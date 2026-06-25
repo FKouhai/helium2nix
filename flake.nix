@@ -32,11 +32,11 @@
           pkgs.appimageTools.wrapType2 rec {
 
             pname = "helium";
-            version = "0.13.4.1";
+            version = "0.13.5.1";
 
             src = pkgs.fetchurl {
               url = "https://github.com/imputnet/helium-linux/releases/download/${version}/${pname}-${version}-x86_64.AppImage";
-              sha256 = "sha256-z23up+T6bj6F+cQslmI92bEksIAw1OQHRIrmQSaaxY8=";
+              sha256 = "sha256-VAncL78nyXRRNUPZ2c0QudxFrfxy7tXE2NFN4teeezk=";
             };
 
             _enableFeatures =
