@@ -45,7 +45,15 @@
                 "VaapiVideoDecoder"
               ];
 
-            extraPkgs = pkgs: pkgs.lib.optionals libvaSupport [ pkgs.libva ];
+            extraPkgs =
+              pkgs:
+              pkgs.lib.optionals libvaSupport [
+                pkgs.libva
+                pkgs.vulkan-loader
+                pkgs.mesa
+                pkgs.libdrm
+                pkgs.libglvnd
+              ];
 
             extraBwrapArgs = [
               "--ro-bind-try /etc/chromium /etc/chromium"
