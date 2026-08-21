@@ -43,6 +43,9 @@
               enableFeatures
               ++ pkgs.lib.optionals libvaSupport [
                 "VaapiVideoDecoder"
+                "Vulkan"
+                "VulkanFromANGLE"
+                "DefaultANGLEVulkan"
               ];
 
             extraPkgs =
