@@ -1,8 +1,10 @@
+
+
 # Helium Browser Nix Flake
 
 This Flake packages the helium browser using its AppImage binary.
 
-**Upstream Repository** [Helium](https://github.com/imputnet/helium)
+**Upstream Repository** [Helium](https://github.com/imputnet/helium-linux)
 
 ## Installation
 
